@@ -1,0 +1,11 @@
+import Album from './album';
+export default class AlbumList extends Component {
+    render() {
+        return (
+            <div>
+                <Album />
+                <Album />
+            </div>
+        );
+    }
+}

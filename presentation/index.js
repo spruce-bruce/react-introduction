@@ -6,9 +6,10 @@ import {
     Appear,
   //BlockQuote,
   //Cite,
-  //CodePane,
+    CodePane,
     Deck,
     Fit,
+    Fill,
     Heading,
     Image,
     Layout,
@@ -21,6 +22,8 @@ import {
     Spectacle,
     Text
 } from 'spectacle';
+
+import Album from '../components/album';
 
 // Require CSS
 require('normalize.css');
@@ -94,13 +97,63 @@ export default class Presentation extends Component {
                             <Appear>
                                 <ListItem margin="0 0 20px 0">Data Model : Easy to reason about</ListItem>
                             </Appear>
+
                         </List>
                     </Slide>
 
-                    <Slide transition = {['slide']} bgColor="tertiary" textColor="secondary">
-                        jfjjasdiure
+                    <Slide transition = {['slide']} bgColor="tertiary" textColor="secondary" align="flex-start flex-start">
+                        <Text size={1} textAlign="left" margin="0 0 50px 0">Reusable</Text>
+                        <Heading size={2} textColor="secondary" textAlign="left" margin="100px 0 0 0">Components</Heading>
+
+                        <List margin="100px 0 0 0">
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Plain javascript objects (extends Component)</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">With a catch... JSX</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Reusable - Props</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Stateful</ListItem>
+                            </Appear>
+                        </List>
                     </Slide>
 
+                    <Slide
+                        transition = {['slide']}
+                        bgColor="tertiary"
+                        textColor="secondary"
+                        align="flex-start flex-start"
+                        notes="Render method<br />JSX"
+                    >
+                        <Text size={1} textAlign="left" margin="0 0 50px 0">Reusable : Components</Text>
+                        <CodePane
+                            lang="jsx"
+                            source = {require('raw!../code/component.code')}
+                            margin = "100px 0 0 0"
+                        />
+
+                        <Album style={{marginTop: 50}}/>
+                    </Slide>
+
+                    <Slide transition = {['slide']} bgColor="tertiary" textColor="secondary" align="flex-start flex-start">
+                        <Text size={1} textAlign="left" margin="0 0 50px 0">Reusable : Components</Text>
+                            <Fill>
+                                <CodePane
+                                    lang="jsx"
+                                    source = {require('raw!../code/multi-component.code')}
+                                    margin = "100px 0 0 0"
+                                />
+                            </Fill>
+                            <Fit>
+                                <div>
+                                    <Album style={{marginTop: 20}} />
+                                    <Album style={{marginTop: 20}} />
+                                </div>
+                            </Fit>
+                    </Slide>
                 </Deck>
             </Spectacle>
         );

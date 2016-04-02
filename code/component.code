@@ -1,0 +1,13 @@
+export default class Album extends Component {
+    render() {
+        return (
+            <div>
+                <img src="https://i.scdn.co/image/912394b1b5a4ddee064db7dc6b53b9eac42a1314" />
+                <div>
+                    <div>Darlinside</div>
+                    <div>Birds Say</div>
+                </div>
+            </div>
+        );
+    }
+}
