@@ -3,19 +3,18 @@ import React, { Component } from 'react';
 
 // Import Spectacle Core tags
 import {
-  //Appear,
+    Appear,
   //BlockQuote,
   //Cite,
   //CodePane,
     Deck,
-    Fill,
     Fit,
     Heading,
     Image,
     Layout,
   //Link,
-  //ListItem,
-  //List,
+    ListItem,
+    List,
   //Markdown,
   //Quote,
     Slide,
@@ -45,7 +44,10 @@ theme.screen.progress.pacman.pacmanTop.background = pacmanColor;
 theme.screen.progress.pacman.pacmanBottom.background = pacmanColor;
 
 const images = {
-    logo : require('../assets/react-logo-1000-transparent.png')
+    logo : require('../assets/react-logo-1000-transparent.png'),
+    aaron : require('../assets/aaron.png'),
+    synapse : require('../assets/synapse.svg'),
+    facebook : require('../assets/facebook.png')
 };
 preloader(images);
 
@@ -60,7 +62,7 @@ export default class Presentation extends Component {
                             <Fit>
                                 <Image src={images.logo.replace('/', '')} height="250px" />
                             </Fit>
-                            <Heading size={1} fill lineHeight={1} textColor="black" textAlign="center" fit margin = "20px 0 0 0">
+                            <Heading size={1} lineHeight={1} textColor="black" textAlign="center" fit margin = "20px 0 0 0">
                                 React
                             </Heading>
                         </Layout>
@@ -70,11 +72,32 @@ export default class Presentation extends Component {
                         <Text margin = "200px 0 0 0">A Presentation by Aaron Bruce</Text>
                     </Slide>
 
-                    <Slide transition = {['slide', 'zoom']}>
-                        jfjfj
+                    <Slide notes = {"Mention PHP and React meetups"} transition = {['slide']}>
+                        <Image src={images.aaron.replace('/', '')} fit display="block" height="500px" />
+                        <Text margin="30px 0 0 0">synapsestudios.com</Text>
                     </Slide>
 
-                    <Slide transition = {['slide', 'zoom']} bgColor="secondary" textColor="primary">
+                    <Slide transition = {['slide']} bgColor="secondary" textColor="primary">
+                        <Layout>
+                            <Fit>
+                                <Image src={images.facebook.replace('/', '')} height="100px" />
+                            </Fit>
+                            <Heading margin = "25px 0 0 20px" fit>Created by Facebook</Heading>
+                        </Layout>
+                        <List margin="150px 0 0 0">
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Reusable User Interface</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Super Fast</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Data Model : Easy to reason about</ListItem>
+                            </Appear>
+                        </List>
+                    </Slide>
+
+                    <Slide transition = {['slide']} bgColor="tertiary" textColor="secondary">
                         jfjjasdiure
                     </Slide>
 
