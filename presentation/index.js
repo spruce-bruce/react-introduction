@@ -8,10 +8,11 @@ import {
   //Cite,
   //CodePane,
     Deck,
-  //Fill,
+    Fill,
+    Fit,
     Heading,
     Image,
-  //Layout,
+    Layout,
   //Link,
   //ListItem,
   //List,
@@ -31,10 +32,14 @@ import createTheme from 'spectacle/lib/themes/default';
 import preloader from 'spectacle/lib/utils/preloader';
 
 const theme = createTheme({
-    primary: '#40e1ff'
+    primary : '#40e1ff'
 }, {
     primary: 'Helvetica'
 });
+
+theme.screen.progress.pacman.point.borderColor = 'black';
+theme.screen.progress.pacman.pacmanTop.background = 'black';
+theme.screen.progress.pacman.pacmanBottom.background = 'black';
 
 const images = {
     logo : require('../assets/react-logo-1000-transparent.png')
@@ -47,14 +52,21 @@ export default class Presentation extends Component {
             <Spectacle theme = {theme}>
                 <Deck transition = {['zoom', 'slide']} transitionDuration={500}>
                     <Slide transition = {['zoom']} bgColor = "white">
-                        <Image src={images.logo.replace('/', '')} height="293px"/>
-                        <Heading size={1} fit lineHeight={1} textColor="black">
-                            React
-                        </Heading>
-                        <Heading size={1} fit caps textColor="black">
+                        <Layout>
+                            <Fit>
+                                <Image src={images.logo.replace('/', '')} height="250px" />
+                            </Fit>
+                            <Heading size={1} fill lineHeight={1} textColor="black" textAlign="center" fit margin = "20px 0 0 0">
+                                React
+                            </Heading>
+                        </Layout>
+                        <Heading size={1} fit caps textColor="primary">
                             A javascript library for building user interfaces
                         </Heading>
-                        <Text margin = "20px 0 0 0">Presented by Aaron Bruce</Text>
+                        <Text margin = "200px 0 0 0">A Presentation by Aaron Bruce</Text>
+                    </Slide>
+                    <Slide>
+                        jfjfj
                     </Slide>
                 </Deck>
             </Spectacle>
