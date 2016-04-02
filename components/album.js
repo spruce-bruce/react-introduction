@@ -6,10 +6,10 @@ export default class Album extends Component {
         style.display = 'flex';
         return (
             <div style={style}>
-                <img style={styles.image} src="https://i.scdn.co/image/912394b1b5a4ddee064db7dc6b53b9eac42a1314" />
+                <img style={styles.image} src={this.props.img} />
                 <div style={styles.albumInfo}>
-                    <div>Darlinside</div>
-                    <div>Birds Say</div>
+                    <div>{this.props.artist}</div>
+                    <div>{this.props.albumName}</div>
                 </div>
             </div>
         );
@@ -23,6 +23,7 @@ const styles = {
         marginRight : 10
     },
     albumInfo : {
-
+        paddingLeft: 10,
+        textAlign: 'left'
     }
 };

@@ -135,24 +135,90 @@ export default class Presentation extends Component {
                             margin = "100px 0 0 0"
                         />
 
-                        <Album style={{marginTop: 50}}/>
+                        <Album
+                            style = {{marginTop: 50}}
+                            img = "https://i.scdn.co/image/912394b1b5a4ddee064db7dc6b53b9eac42a1314"
+                            artist = "Darlingside"
+                            albumName = "Birds Say"
+                        />
                     </Slide>
 
                     <Slide transition = {['slide']} bgColor="tertiary" textColor="secondary" align="flex-start flex-start">
                         <Text size={1} textAlign="left" margin="0 0 50px 0">Reusable : Components</Text>
+                        <Fill>
+                            <CodePane
+                                lang="jsx"
+                                source = {require('raw!../code/multi-component.code')}
+                                margin = "100px 0 0 0"
+                            />
+                        </Fill>
+                        <Fit>
+                            <div>
+                                <Album
+                                    style = {{marginTop: 20}}
+                                    img = "https://i.scdn.co/image/912394b1b5a4ddee064db7dc6b53b9eac42a1314"
+                                    artist = "Darlingside"
+                                    albumName = "Birds Say"
+                                />
+                                <Album
+                                    style = {{marginTop: 20}}
+                                    img = "https://i.scdn.co/image/912394b1b5a4ddee064db7dc6b53b9eac42a1314"
+                                    artist = "Darlingside"
+                                    albumName = "Birds Say"
+                                />
+                            </div>
+                        </Fit>
+                    </Slide>
+
+                    <Slide
+                        transition = {['slide']}
+                        bgColor="tertiary"
+                        textColor="secondary"
+                        align="flex-start flex-start"
+                        notes="Render method<br />JSX"
+                    >
+                        <Text size={1} textAlign="left" margin="0 0 50px 0">Reusable : Components</Text>
+                        <CodePane
+                            lang="jsx"
+                            source = {require('raw!../code/component-props.code')}
+                            margin = "100px 0 0 0"
+                        />
+
+                        <Album
+                            style = {{marginTop: 50}}
+                            img = "https://i.scdn.co/image/912394b1b5a4ddee064db7dc6b53b9eac42a1314"
+                            artist = "Darlingside"
+                            albumName = "Birds Say"
+                        />
+                    </Slide>
+
+                    <Slide transition = {['slide']} bgColor="tertiary" textColor="secondary" align="flex-start flex-start">
+                        <Text size={1} textAlign="left" margin="0 0 100px 0">Reusable : Components</Text>
+                        <Layout>
                             <Fill>
                                 <CodePane
                                     lang="jsx"
-                                    source = {require('raw!../code/multi-component.code')}
-                                    margin = "100px 0 0 0"
+                                    source = {require('raw!../code/multi-component-props.code')}
+                                    margin = "0 0 0 0"
                                 />
                             </Fill>
                             <Fit>
-                                <div>
-                                    <Album style={{marginTop: 20}} />
-                                    <Album style={{marginTop: 20}} />
+                                <div style={{marginLeft: 10}}>
+                                    <Album
+                                        style = {{marginTop: 20}}
+                                        img = "https://i.scdn.co/image/912394b1b5a4ddee064db7dc6b53b9eac42a1314"
+                                        artist = "Darlingside"
+                                        albumName = "Birds Say"
+                                    />
+                                    <Album
+                                        style = {{marginTop: 20}}
+                                        img = "https://i.scdn.co/image/0e1dc4ebdc74b8166137c9322a2eccfbadd624b0"
+                                        artist = "Darlingside"
+                                        albumName = "Pilot Machines"
+                                    />
                                 </div>
                             </Fit>
+                        </Layout>
                     </Slide>
                 </Deck>
             </Spectacle>
