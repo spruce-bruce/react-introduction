@@ -32,14 +32,17 @@ import createTheme from 'spectacle/lib/themes/default';
 import preloader from 'spectacle/lib/utils/preloader';
 
 const theme = createTheme({
-    primary : '#40e1ff'
+    primary : '#40e1ff',
+    secondary : 'black',
+    tertiary : 'white'
 }, {
     primary: 'Helvetica'
 });
 
-theme.screen.progress.pacman.point.borderColor = 'black';
-theme.screen.progress.pacman.pacmanTop.background = 'black';
-theme.screen.progress.pacman.pacmanBottom.background = 'black';
+const pacmanColor = '#247BA0';
+theme.screen.progress.pacman.point.borderColor = pacmanColor;
+theme.screen.progress.pacman.pacmanTop.background = pacmanColor;
+theme.screen.progress.pacman.pacmanBottom.background = pacmanColor;
 
 const images = {
     logo : require('../assets/react-logo-1000-transparent.png')
@@ -51,6 +54,7 @@ export default class Presentation extends Component {
         return (
             <Spectacle theme = {theme}>
                 <Deck transition = {['zoom', 'slide']} transitionDuration={500}>
+
                     <Slide transition = {['zoom']} bgColor = "white">
                         <Layout>
                             <Fit>
@@ -65,9 +69,15 @@ export default class Presentation extends Component {
                         </Heading>
                         <Text margin = "200px 0 0 0">A Presentation by Aaron Bruce</Text>
                     </Slide>
-                    <Slide>
+
+                    <Slide transition = {['slide', 'zoom']}>
                         jfjfj
                     </Slide>
+
+                    <Slide transition = {['slide', 'zoom']} bgColor="secondary" textColor="primary">
+                        jfjjasdiure
+                    </Slide>
+
                 </Deck>
             </Spectacle>
         );
