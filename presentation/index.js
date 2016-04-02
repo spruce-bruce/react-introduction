@@ -18,8 +18,8 @@ import {
   //Markdown,
   //Quote,
     Slide,
-    Spectacle
-  //Text
+    Spectacle,
+    Text
 } from 'spectacle';
 
 // Require CSS
@@ -31,6 +31,8 @@ import createTheme from 'spectacle/lib/themes/default';
 
 const theme = createTheme({
     primary: '#40e1ff'
+}, {
+    primary: 'Helvetica'
 });
 
 export default class Presentation extends Component {
@@ -45,6 +47,7 @@ export default class Presentation extends Component {
                         <Heading size={1} fit caps margin = "50px 0 0 0">
                             A javascript library for building user interfaces
                         </Heading>
+                        <Text>Presented by Aaron Bruce</Text>
                     </Slide>
                 </Deck>
             </Spectacle>
