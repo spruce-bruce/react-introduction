@@ -6,6 +6,7 @@
   "indent": [2, 4, {"SwitchCase": 1}]
   "max-len": 0
   "quotes": [2, "single", "avoid-escape"]
+  "key-spacing": 0
 "env":
   "browser": true,
   "node": true

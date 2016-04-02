@@ -10,7 +10,7 @@ import {
     Deck,
   //Fill,
     Heading,
-  //Image,
+    Image,
   //Layout,
   //Link,
   //ListItem,
@@ -28,6 +28,7 @@ require('spectacle/lib/themes/default/index.css');
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
+import preloader from 'spectacle/lib/utils/preloader';
 
 const theme = createTheme({
     primary: '#40e1ff'
@@ -35,19 +36,25 @@ const theme = createTheme({
     primary: 'Helvetica'
 });
 
+const images = {
+    logo : require('../assets/react-logo-1000-transparent.png')
+};
+preloader(images);
+
 export default class Presentation extends Component {
     render() {
         return (
             <Spectacle theme = {theme}>
                 <Deck transition = {['zoom', 'slide']} transitionDuration={500}>
-                    <Slide transition = {['zoom']}>
+                    <Slide transition = {['zoom']} bgColor = "white">
+                        <Image src={images.logo.replace('/', '')} height="293px"/>
                         <Heading size={1} fit lineHeight={1} textColor="black">
-                            ReactJS
+                            React
                         </Heading>
-                        <Heading size={1} fit caps margin = "50px 0 0 0">
+                        <Heading size={1} fit caps textColor="black">
                             A javascript library for building user interfaces
                         </Heading>
-                        <Text>Presented by Aaron Bruce</Text>
+                        <Text margin = "20px 0 0 0">Presented by Aaron Bruce</Text>
                     </Slide>
                 </Deck>
             </Spectacle>
