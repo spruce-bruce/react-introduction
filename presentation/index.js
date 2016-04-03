@@ -175,7 +175,6 @@ export default class Presentation extends Component {
                         bgColor="tertiary"
                         textColor="secondary"
                         align="flex-start flex-start"
-                        notes="Render method<br />JSX"
                     >
                         <Text size={1} textAlign="left" margin="0 0 50px 0">Reusable : Components</Text>
                         <CodePane
@@ -192,7 +191,13 @@ export default class Presentation extends Component {
                         />
                     </Slide>
 
-                    <Slide transition = {['slide']} bgColor="tertiary" textColor="secondary" align="flex-start flex-start">
+                    <Slide
+                        transition = {['slide']}
+                        bgColor="tertiary"
+                        textColor="secondary"
+                        align="flex-start flex-start"
+                        notes="Render is called when props are updated"
+                    >
                         <Text size={1} textAlign="left" margin="0 0 100px 0">Reusable : Components</Text>
                         <Layout>
                             <Fill>
@@ -219,6 +224,38 @@ export default class Presentation extends Component {
                                 </div>
                             </Fit>
                         </Layout>
+                    </Slide>
+
+                    <Slide
+                        transition = {['slide']}
+                        bgColor="tertiary"
+                        textColor="secondary"
+                        align="flex-start flex-start"
+                        notes="All the code for rendering this component is in one place"
+                    >
+                        <Text size={1} textAlign="left" margin="0 0 50px 0">Reusable : Components</Text>
+                        <Layout>
+                            <Fill>
+                                <CodePane
+                                    lang="jsx"
+                                    source = {require('raw!../code/component-state.code')}
+                                    margin = "0 0 0 0"
+                                />
+                            </Fill>
+
+                            <Fit>
+                                <Album
+                                    style = {{marginTop: 50}}
+                                    img = "https://i.scdn.co/image/912394b1b5a4ddee064db7dc6b53b9eac42a1314"
+                                    artist = "Darlingside"
+                                    albumName = "Birds Say"
+                                />
+                            </Fit>
+                        </Layout>
+                    </Slide>
+
+                    <Slide transition = {['slide']}>
+                        <Heading>Look at the real component</Heading>
                     </Slide>
                 </Deck>
             </Spectacle>
