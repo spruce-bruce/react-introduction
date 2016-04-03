@@ -1,12 +1,4 @@
 export default class Album extends Component {
-    constructor(props) {
-        super(props);
-
-        this.toggleSelect = this.toggleSelect.bind(this);
-        this.state = {
-            selected : false
-        };
-    }
 
     toggleSelect() {
         this.setState({selected: !this.state.selected});
