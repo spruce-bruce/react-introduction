@@ -50,7 +50,9 @@ const images = {
     logo : require('../assets/react-logo-1000-transparent.png'),
     aaron : require('../assets/aaron.png'),
     synapse : require('../assets/synapse.svg'),
-    facebook : require('../assets/facebook.png')
+    facebook : require('../assets/facebook.png'),
+    superFast : require('../assets/super-fast.jpg'),
+    sucks : require('../assets/sucks.jpg')
 };
 preloader(images);
 
@@ -72,7 +74,9 @@ export default class Presentation extends Component {
                         <Heading size={1} fit caps textColor="primary">
                             A javascript library for building user interfaces
                         </Heading>
-                        <Text margin = "200px 0 0 0">A Presentation by Aaron Bruce</Text>
+                        <Text margin = "200px 0 10px 0">A Presentation by Aaron Bruce</Text>
+                        <Text>github.com/spruce-bruce</Text>
+                        <Text>@TerribleAaron</Text>
                     </Slide>
 
                     <Slide notes = {"Mention PHP and React meetups"} transition = {['slide']}>
@@ -256,6 +260,67 @@ export default class Presentation extends Component {
 
                     <Slide transition = {['slide']}>
                         <Heading>Look at the real component</Heading>
+                    </Slide>
+
+                    <Slide transition = {['slide']} bgColor="secondary" textColor="primary">
+                        <Heading margin="0 0 40px 0" textColor="primary">Performance</Heading>
+                        <Appear><Image src={images.superFast.replace('/', '')} height="400px" /></Appear>
+                        <Text textColor="primary">React is Super Fast!</Text>
+                    </Slide>
+
+                    <Slide
+                        transition = {['slide']}
+                        notes="Legacy DOM : js first released in netscape<br />Intermediate DOM was platform specific<br />W3C standardized in 1998"
+                        bgColor="tertiary"
+                        textColor="secondary"
+                    >
+                        <Heading textColor="secondary">A little history:</Heading>
+                        <Text textSize="80" textColor="primary">The DOM</Text>
+                        <List margin="100px 0 0 0">
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">1995 : Legacy DOM</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">1997 : Intermediate DOM</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">1998 : Standardization, DOM Level 1</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">2000 : getElementById(), DOM Level 2</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">2004 : Current version, DOM Level 3</ListItem>
+                            </Appear>
+
+                        </List>
+                    </Slide>
+
+                    <Slide transition = {['slide']} bgColor="tertiary" textColor="secondary">
+                        <Heading margin="0 0 40px 0" textColor="secondary">The DOM Sucks!</Heading>
+                        <Image src={images.sucks.replace('/', '')} height="250px" />
+                    </Slide>
+
+                    <Slide
+                        transition = {['slide']}
+                        bgColor="secondary"
+                        textColor="primary"
+                        notes="React creates an in-memory data structure cache, computes the resulting differences, and then updates the browser's displayed DOM efficiently"
+                    >
+                        <Heading textColor="primary">The Virtual DOM</Heading>
+                    </Slide>
+
+                    <Slide transition = {['slide']}>
+                        <Heading fit>Performance</Heading>
+                        <Text>Only render when you have to</Text>
+                    </Slide>
+
+                    <Slide transition = {['slide']} bgColor="tertiary" textColor="primary">
+                        <Heading fit textColor="secondary">shouldComponentUpdate()</Heading>
+                        <List margin="100px 0 0 0">
+                            <ListItem margin="0 0 20px 0">PureRenderMixin</ListItem>
+                            <ListItem margin="0 0 20px 0">shallowCompare()</ListItem>
+                        </List>
                     </Slide>
                 </Deck>
             </Spectacle>
