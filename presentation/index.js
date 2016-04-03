@@ -52,7 +52,8 @@ const images = {
     synapse : require('../assets/synapse.svg'),
     facebook : require('../assets/facebook.png'),
     superFast : require('../assets/super-fast.jpg'),
-    sucks : require('../assets/sucks.jpg')
+    sucks : require('../assets/sucks.jpg'),
+    flux : require('../assets/flux.png')
 };
 preloader(images);
 
@@ -320,6 +321,61 @@ export default class Presentation extends Component {
                         <List margin="100px 0 0 0">
                             <ListItem margin="0 0 20px 0">PureRenderMixin</ListItem>
                             <ListItem margin="0 0 20px 0">shallowCompare()</ListItem>
+                        </List>
+                    </Slide>
+
+                    <Slide
+                        transition = {['slide']}
+                        bgColor="secondary"
+                        textColor="primary"
+                    >
+                        <Heading textColor="primary">DEMO</Heading>
+                    </Slide>
+
+                    <Slide transition = {['slide']}>
+                        <Heading fit>Data Model</Heading>
+                        <Text>Easy to reason about</Text>
+                        <List>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">State & Props</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Flux</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Redux</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Relay</ListItem>
+                            </Appear>
+                        </List>
+                    </Slide>
+
+                    <Slide transition = {['slide']} bgColor="tertiary" textColor="primary">
+                        <Heading textColor="primary">Flux</Heading>
+                        <Image src={images.flux.replace('/', '')} height="250px" />
+                    </Slide>
+
+                    <Slide
+                        transition = {['slide']}
+                        bgColor="secondary"
+                        textColor="primary"
+                    >
+                        <Heading textColor="primary">Redux</Heading>
+                        <List>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Super popular! We use this at Synapse!</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Introduces single application store</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Reducers, middleware, dev tools</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Life is awesome!</ListItem>
+                            </Appear>
+
                         </List>
                     </Slide>
                 </Deck>
