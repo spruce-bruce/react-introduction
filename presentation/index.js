@@ -382,6 +382,17 @@ export default class Presentation extends Component {
 
                     <Slide transition = {['slide']} bgColor="tertiary" textColor="primary">
                         <Heading textColor="primary">Relay</Heading>
+                        <List>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Single application state, like redux</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Components declare the data they're interested in</ListItem>
+                            </Appear>
+                            <Appear>
+                                <ListItem margin="0 0 20px 0">Relay handles communication with the server (GraphQL)</ListItem>
+                            </Appear>
+                        </List>
                     </Slide>
 
                     <Slide
