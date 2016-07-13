@@ -76,13 +76,12 @@ export default class Presentation extends Component {
                             A javascript library for building user interfaces
                         </Heading>
                         <Text margin = "200px 0 10px 0">A Presentation by Aaron Bruce</Text>
-                        <Text>github.com/spruce-bruce</Text>
-                        <Text>@TerribleAaron</Text>
+                        <Text><a href="github.com/spruce-bruce">github.com/spruce-bruce</a></Text>
+                        <Text><a href="https://twitter.com/TerribleAaron">@TerribleAaron</a></Text>
                     </Slide>
 
                     <Slide notes = {"Mention PHP and React meetups"} transition = {['slide']}>
-                        <Image src={images.aaron.replace('/', '')} fit display="block" height="500px" />
-                        <Text margin="30px 0 0 0">synapsestudios.com</Text>
+                        <Image src={images.aaron.replace('/', '')} fit display="block" height="600px" />
                     </Slide>
 
                     <Slide transition = {['slide']} bgColor="secondary" textColor="primary">
